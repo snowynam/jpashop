@@ -12,3 +12,8 @@ C:\Users\admin\jpashop.mv.db 파일 생성됨
 
 url을 아래와 같이 변경 후 접속
 jdbc:h2:tcp://localhost/~/jpashop
+
+
+빌드
+gradlew clean build
+java -jar aaaaaa.jar
