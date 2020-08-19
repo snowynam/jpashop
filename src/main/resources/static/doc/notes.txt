@@ -17,3 +17,7 @@ jdbc:h2:tcp://localhost/~/jpashop
 빌드
 gradlew clean build
 java -jar aaaaaa.jar
+
+SQL 파라메터 로그 외부 라이브러리
+https://github.com/gavlyukovskiy/spring-boot-data-source-decorator
+implementation("com.github.gavlyukovskiy:p6spy-spring-boot-starter:${version}")
