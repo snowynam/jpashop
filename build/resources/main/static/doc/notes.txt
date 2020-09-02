@@ -1,0 +1,23 @@
+spring-boot 초기 아이디 : user
+
+thymleaf 공식 사이트 : https://www.thymeleaf.org/
+스프링 공식 튜터리얼 : https://spring.io/guides/gs/serving-web-content/
+스프링 부트 매뉴얼 : 
+
+
+h2database.com
+h2 DB 설치
+최초 한번 접속후
+C:\Users\admin\jpashop.mv.db 파일 생성됨
+
+url을 아래와 같이 변경 후 접속
+jdbc:h2:tcp://localhost/~/jpashop
+
+
+빌드
+gradlew clean build
+java -jar aaaaaa.jar
+
+SQL 파라메터 로그 외부 라이브러리
+https://github.com/gavlyukovskiy/spring-boot-data-source-decorator
+implementation("com.github.gavlyukovskiy:p6spy-spring-boot-starter:${version}")
