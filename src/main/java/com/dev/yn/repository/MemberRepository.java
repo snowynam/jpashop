@@ -10,7 +10,7 @@ import com.dev.yn.Model.Member;
 @Repository
 public class MemberRepository {
 	
-	@PersistenceContext
+	@PersistenceContext //스프링부트가 엔티티 매니저를 알아서 생성해줌.
 	private EntityManager em;
 	
 	public Long save(Member member) {

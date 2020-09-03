@@ -6,7 +6,7 @@ spring:
     
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: create          #어플리케이션을 실행하는 시점에 모두 지우고 새로 생성?
     properties:      hibernate:
 #        show_sql: true
         format_sql: true

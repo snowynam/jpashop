@@ -20,7 +20,7 @@ public class MemberRepositoryTest {
 	
 	@Test
 	@Transactional
-	@Rollback(false)
+	//@Rollback(false)
 	public void testMember() throws Exception {
 		//given
 		Member member = new Member();
@@ -34,5 +34,6 @@ public class MemberRepositoryTest {
 		Assertions.assertThat(findMember.getId()).isEqualTo(member.getId());
 		Assertions.assertThat(findMember.getUsername()).isEqualTo(member.getUsername());
 		Assertions.assertThat(findMember).isEqualTo(member);
+		System.out.println("findMember == member: " + (findMember == member));
 	}
 }
