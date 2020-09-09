@@ -34,6 +34,4 @@ out/
 .vscode/
 
 
-**/**.class
-/bin/**
-**/text/**
+bin/
