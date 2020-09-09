@@ -9,18 +9,20 @@ import org.springframework.stereotype.Repository;
 
 import com.dev.yn.domain.Member;
 
+import lombok.RequiredArgsConstructor;
+
 @Repository
+@RequiredArgsConstructor
 public class MemberRepository {
 	
-	@PersistenceContext //스프링부트가 엔티티 매니저를 알아서 생성해줌.
-	private EntityManager em;
+	private final EntityManager em;
 	
-	public Long save(Member member) {
+	public Long join(Member member) {
 		em.persist(member);
 		return member.getId();
 	}
 	
-	public Member find(Long id) {
+	public Member findOne(Long id) {
 		return em.find(Member.class, id);
 	}
 	
