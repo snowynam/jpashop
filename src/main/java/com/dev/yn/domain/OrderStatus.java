@@ -1,5 +1,5 @@
 package com.dev.yn.domain;
 
-public enum OderStatus {
+public enum OrderStatus {
 	ORDER, CANCEL
 }
