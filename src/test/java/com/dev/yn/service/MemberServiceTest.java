@@ -46,6 +46,7 @@ public class MemberServiceTest {
 	}
     
     @Test
+    //@Test(expected = IllegalStateException.class)
 	public void 중복_회원_예약() {
 		// given 
     	Member member1 = new Member();
