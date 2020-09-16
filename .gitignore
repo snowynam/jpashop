@@ -36,3 +36,4 @@ out/
 
 bin/
 *.class
+/*.log
