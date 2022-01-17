@@ -32,4 +32,12 @@ out/
 
 ### VS Code ###
 .vscode/
+<<<<<<< HEAD
 /bin/
+=======
+
+
+bin/
+*.class
+/*.log
+>>>>>>> a69c336f0cf25fede0197cfc06bd3313c168e9f1

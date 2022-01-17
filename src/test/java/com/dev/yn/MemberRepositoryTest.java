@@ -9,7 +9,7 @@ import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.dev.yn.Model.Member;
+import com.dev.yn.domain.Member;
 import com.dev.yn.repository.MemberRepository;
 
 @ExtendWith(SpringExtension.class)
@@ -24,15 +24,16 @@ public class MemberRepositoryTest {
 	public void testMember() throws Exception {
 		//given
 		Member member = new Member();
-		member.setUsername("memberA");
+		member.setName("memberA");
  
 		//when
-		Long savedId = memberRepository.save(member);
-		Member findMember = memberRepository.find(savedId); 
+		Long savedId = memberRepository.join(member);
+		Member findMember = memberRepository.findOne(savedId); 
 		
 		//then
 		Assertions.assertThat(findMember.getId()).isEqualTo(member.getId());
-		Assertions.assertThat(findMember.getUsername()).isEqualTo(member.getUsername());
+		Assertions.assertThat(findMember.getName()).isEqualTo(member.getName());
 		Assertions.assertThat(findMember).isEqualTo(member);
+		System.out.println("findMember == member: " + (findMember == member));
 	}
 }
